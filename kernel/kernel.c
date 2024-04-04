@@ -20,8 +20,12 @@ int main() {
             break;
         }
 
-        if (strcmp(input,"minisystem") == 0){
+        else if (strcmp(input,"minisystem") == 0){
             minisystem();
+        }
+        
+        else if (strcmp(input,"student_id") == 0){
+            student_id();
         }
         else system(input);
     }
