@@ -27,6 +27,12 @@ int main() {
         else if (strcmp(input,"student_id") == 0){
             student_id();
         }
+        else if (strcmp(input,"shm") == 0){
+            shm();
+        }
+        else if (strcmp(input,"pipe") == 0){
+            ipc_pipe();
+        }
         else system(input);
     }
 

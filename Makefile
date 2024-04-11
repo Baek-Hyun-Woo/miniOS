@@ -8,15 +8,18 @@ LDFLAGS=-lreadline
 TARGET=minios
 
 # Source, Object files
-SRCS=kernel/20192596/fork.c
+SRCS=kernel/kernel.c kernel/system.c kernel/20192596/shm.c kernel/20192596/ipc_pipe.c
 OBJS=$(SRCS:.c=.o) 
 
-# Suorce1
+# Source1(~week4)
 #SRCS=kernel/kernel.c kernel/system.c
+
+#Source1(week5)
+#SRCS=kernel/20192596/fork.c
+
 
 # Include directory
 INCLUDE_DIR=include
-
 
 
 all: $(TARGET)
@@ -31,3 +34,6 @@ $(TARGET): $(OBJS)
 # Clean up:
 clean:
 	rm -f $(OBJS) $(TARGET)
+	
+	
+
