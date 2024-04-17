@@ -33,6 +33,9 @@ int main() {
         else if (strcmp(input,"pipe") == 0){
             ipc_pipe();
         }
+	    else if (strcmp(input,"pi") == 0){
+	       pi();
+	    }
         else system(input);
     }
 
