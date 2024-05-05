@@ -8,15 +8,17 @@ LDFLAGS=-lreadline
 TARGET=minios
 
 # Source, Object files
-SRCS=kernel/kernel.c kernel/system.c kernel/20192596/shm.c kernel/20192596/ipc_pipe.c kernel/20192596/pi.c
+SRCS=kernel/kernel.c kernel/system.c kernel/20192596/shm.c kernel/20192596/ipc_pipe.c  kernel/20192596/pi.c kernel/20192596/round_robin.c
 OBJS=$(SRCS:.c=.o) 
 
 # Source1(~week4)
 #SRCS=kernel/kernel.c kernel/system.c
 
-#Source1(week5)
+#Source2(week5)
 #SRCS=kernel/20192596/fork.c
 
+#Source3(week7)
+#SRCS=kernel/kernel.c kernel/system.c kernel/20192596/shm.c kernel/20192596/ipc_pipe.c  kernel/20192596/pi.c
 
 # Include directory
 INCLUDE_DIR=include

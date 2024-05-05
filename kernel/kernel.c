@@ -34,8 +34,11 @@ int main() {
             ipc_pipe();
         }
 	    else if (strcmp(input,"pi") == 0){
-	       pi();
+	        pi();
 	    }
+        else if (strcmp(input,"roundrobin") == 0){
+            round_robin();
+        }
         else system(input);
     }
 

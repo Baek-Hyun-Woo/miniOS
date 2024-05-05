@@ -9,7 +9,6 @@
 int total_points = 0; // 원 안의 point 개수(전역변수)
 pthread_mutex_t mutex;
 
-
 void *monte_carlo(void *thread_id) {
     int id = *((int *)thread_id);
     int points_per_thread = TOTAL_POINTS / NUM_THREADS;
