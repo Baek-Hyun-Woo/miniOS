@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MAX_PROCESSES 10
+#define MAX_PROCESSES 20
 
 typedef struct {
   int pid;
@@ -23,7 +23,6 @@ void schedule() {
   while (completed_processes < num_processes) {
     for (int i = 0; i < num_processes; i++) {
       if (processes[i].remaining_time > 0) {
-        // Execute process for a quantum or until completion
         int execution_time = (processes[i].remaining_time > quantum) ? quantum : processes[i].remaining_time;
         processes[i].remaining_time -= execution_time;
         current_time += execution_time;
@@ -42,6 +41,7 @@ void schedule() {
 int round_robin() {
   printf("Enter the number of processes: ");
   scanf("%d", &num_processes);
+  printf("\n");
 
   for (int i = 0; i < num_processes; i++) {
     processes[i].pid = i + 1;

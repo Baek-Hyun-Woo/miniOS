@@ -39,6 +39,9 @@ int main() {
         else if (strcmp(input,"roundrobin") == 0){
             round_robin();
         }
+        else if (strcmp(input,"minils")==0){
+            minils();
+        }
         else system(input);
     }
 
