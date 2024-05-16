@@ -9,3 +9,4 @@ int ipc_pipe();
 int pi();
 int round_robin();
 void minils();
+int sync_cal_pi();

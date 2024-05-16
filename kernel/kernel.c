@@ -42,6 +42,9 @@ int main() {
         else if (strcmp(input,"minils")==0){
             minils();
         }
+        else if (strcmp(input,"sync") == 0){
+            sync_cal_pi();
+        }
         else system(input);
     }
 
