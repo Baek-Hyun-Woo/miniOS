@@ -107,7 +107,6 @@ int RR() {
     scanf("%d", &processes[i].burst_time);
     processes[i].remaining_time = processes[i].burst_time;
 
-    // Remove priority input
     printf("Enter I/O time for process %d: ", i + 1);
     scanf("%d", &processes[i].io_time);
   }
