@@ -45,6 +45,9 @@ int main() {
         else if (strcmp(input,"sync") == 0){
             sync_cal_pi();
         }
+        else if (strcmp(input,"RR") == 0){
+            RR();
+        }
         else system(input);
     }
 
