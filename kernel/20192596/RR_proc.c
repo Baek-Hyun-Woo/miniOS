@@ -56,7 +56,7 @@ void schedule2() {
 
     int current_process = queue[front]; 
 
-    // current_state = READY
+    // READY -> RUNNING
     if (processes[current_process].state == READY) {
       processes[current_process].state = RUNNING;
       print_process_state(processes[current_process].pid, processes[current_process].state);
@@ -68,14 +68,14 @@ void schedule2() {
 
         printf("Process %d executed for %d units. Remaining time: %d\n", processes[current_process].pid, execution_time, processes[current_process].remaining_time);
 
-        // TERMINATED
+        // RUNNING -> TERMINATED
         if (processes[current_process].remaining_time == 0) {
           processes[current_process].state = TERMINATED;
           completed_processes++;
           printf("Process %d completed at time %d\n", processes[current_process].pid, current_time);
           print_process_state(processes[current_process].pid, processes[current_process].state);
           printf("\n");
-        } else {
+        } else { //RUNNING -> READY
           processes[current_process].state = READY;
           print_process_state(processes[current_process].pid, processes[current_process].state);
           printf("\n");
